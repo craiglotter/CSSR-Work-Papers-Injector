@@ -1,4 +1,16 @@
-CSSR-Work-Papers-Injector
+CSSR Work Papers Injector
 =========================
 
-I recently took over the CSSR website for Commerce IT. The site is poorly designed and is made up of a number of flat html files. Given the mandate to update the site, one of the things I decided to do was create an ASP based management module for their working papers. In order to do this, I need the information contained in the flat files to be put in a useable Access database. CSSR Work Papers Injector is the tool for this job, parsing the existing files and injecting the information into a specified database.  Created by Craig Lotter, October 2007
+I recently took over the CSSR website for Commerce IT. The site is poorly designed and is made up of a number of flat html files. Given the mandate to update the site, one of the things I decided to do was create an ASP based management module for their working papers. In order to do this, I need the information contained in the flat files to be put in a useable Access database. CSSR Work Papers Injector is the tool for this job, parsing the existing files and injecting the information into a specified database. 
+
+Note: The sample files and database are included in the installation folder.
+
+Created by Craig Lotter, October 2007
+
+*********************************
+
+Project Details:
+
+Coded in Visual Basic .NET using Visual Studio .NET 2005
+Implements concepts such as File Manipulation, Drag and Drop, SQL, Database Access.
+Level of Complexity: Very Simple
