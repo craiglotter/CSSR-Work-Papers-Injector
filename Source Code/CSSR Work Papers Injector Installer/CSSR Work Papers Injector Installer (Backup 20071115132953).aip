@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT type="Advanced Installer" version="1.9" modules="professional" RootPath=".">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="CTRLS" Value="3"/>
+    <ROW Property="ProductName" Value="CSSR Work Papers Injector"/>
+    <ROW Property="ALLUSERS" Value="2"/>
+    <ROW Property="BannerBitmap" Value="installer_background.jpg"/>
+    <ROW Property="ProductVersion" Value="1.0.0"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{C26E4C18-ED91-4632-9EDC-783D1D8D484E}"/>
+    <ROW Property="ProductCode" Value="{0681B985-A013-43C0-A818-547BEFB3E9D1}"/>
+    <ROW Property="ARPPRODUCTICON" Value="controlPanelIcon.exe"/>
+    <ROW Property="DialogBitmap" Value="installer_background_dialog.jpg"/>
+    <ROW Property="Manufacturer" Value="CodeUnit"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="Sample_Database_DIR" Directory_Parent="TARGETDIR" DefaultDir="Sample~1|Sample Database"/>
+    <ROW Directory="Inputs_DIR" Directory_Parent="TARGETDIR" DefaultDir="Inputs"/>
+    <ROW Directory="Sample_Papers_DIR" Directory_Parent="TARGETDIR" DefaultDir="Sample~2|Sample Papers"/>
+    <ROW Directory="TARGETDIR" Directory_Parent="" DefaultDir="SourceDir"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="Application_Loader.exe" ComponentId="{2D63910C-8C80-4F20-9A69-35FBA1C0CE58}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="Application_Loader.exe" FullKeyPath="TARGETDIR\Application_Loader.exe"/>
+    <ROW Component="AutoUpdate.exe" ComponentId="{6358FB7D-0DEE-4E9A-B09E-1D5814729608}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="AutoUpdate.exe" FullKeyPath="TARGETDIR\AutoUpdate.exe"/>
+    <ROW Component="CSSR_Work_Papers_Injector.exe" ComponentId="{8A3A343A-F070-463D-90A6-D3E51AAF3A5A}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="CSSR_Work_Papers_Injector.exe" FullKeyPath="TARGETDIR\CSSR Work Papers Injector.exe"/>
+    <ROW Component="config.aup" ComponentId="{B2A0EE80-99D5-4528-8F04-776CB23384B3}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="config.aup" FullKeyPath="TARGETDIR"/>
+    <ROW Component="CSSR_WorkingPapers.mdb" ComponentId="{B238BA00-4974-46C9-9CE7-0267FC8B46C3}" Directory_="Sample_Database_DIR" Attributes="0" Condition="" KeyPath="CSSR_WorkingPapers.mdb" FullKeyPath="TARGETDIR\Sample Database"/>
+    <ROW Component="Inputs.txt" ComponentId="{24E79F9D-2427-42F3-B607-889DBF6383BE}" Directory_="Inputs_DIR" Attributes="0" Condition="" KeyPath="Inputs.txt" FullKeyPath="TARGETDIR\Inputs"/>
+    <ROW Component="dummy.html" ComponentId="{57A5F686-0388-4E02-B9C4-FCD076D0B046}" Directory_="Sample_Papers_DIR" Attributes="0" Condition="" KeyPath="dummy.html" FullKeyPath="TARGETDIR\Sample Papers"/>
+    <ROW Component="za.exe" ComponentId="{5B17A184-FA0F-48B7-82EF-B3A486479C19}" Directory_="TARGETDIR" Attributes="0" Condition="" KeyPath="za.exe" FullKeyPath="TARGETDIR\7za.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Feature_Parent="" Title="MainFeature" Description="Description" Display="2" Level="1" Directory_="TARGETDIR" Attributes="0" Components="za.exe Application_Loader.exe AutoUpdate.exe config.aup CSSR_Work_Papers_Injector.exe Inputs.txt CSSR_WorkingPapers.mdb dummy.html"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="Inputs.txt" Component_="Inputs.txt" FileName="Inputs.txt" Version="" Language="" Attributes="" SourcePath="..\CSSR Work Papers Injector\Required Files\Inputs\Inputs.txt" SelfReg="false"/>
+    <ROW File="wp34.html" Component_="dummy.html" FileName="wp34~1.htm|wp34.html" Version="" Language="" Attributes="" SourcePath="..\CSSR Work Papers Injector\Required Files\Sample Papers\wp34.html" SelfReg="false"/>
+    <ROW File="Application_Loader.exe" Component_="Application_Loader.exe" FileName="Applic~1.exe|Application_Loader.exe" Version="" Language="" Attributes="" SourcePath="..\CSSR Work Papers Injector\Required Files\Application_Loader.exe" SelfReg="false"/>
+    <ROW File="Description.txt" Component_="config.aup" FileName="Descri~1.txt|Description.txt" Version="" Language="" Attributes="" SourcePath="..\CSSR Work Papers Injector\Required Files\Description.txt" SelfReg="false"/>
+    <ROW File="config.aup" Component_="config.aup" FileName="config.aup" Version="" Language="" Attributes="" SourcePath="..\CSSR Work Papers Injector\Required Files\config.aup" SelfReg="false"/>
+    <ROW File="wp196.html" Component_="dummy.html" FileName="wp196~1.htm|wp196.html" Version="" Language="" Attributes="" SourcePath="..\CSSR Work Papers Injector\Required Files\Sample Papers\wp196.html" SelfReg="false"/>
+    <ROW File="CSSR_WorkingPapers.mdb" Component_="CSSR_WorkingPapers.mdb" FileName="CSSR_W~1.mdb|CSSR_WorkingPapers.mdb" Version="" Language="" Attributes="" SourcePath="..\CSSR Work Papers Injector\Required Files\Sample Database\CSSR_WorkingPapers.mdb" SelfReg="false"/>
+    <ROW File="Help.txt" Component_="config.aup" FileName="Help.txt" Version="" Language="" Attributes="" SourcePath="..\CSSR Work Papers Injector\Required Files\Help.txt" SelfReg="false"/>
+    <ROW File="dummy.html" Component_="dummy.html" FileName="dummy~1.htm|dummy.html" Version="" Language="" Attributes="" SourcePath="..\CSSR Work Papers Injector\Required Files\Sample Papers\dummy.html" SelfReg="false"/>
+    <ROW File="wp10.html" Component_="dummy.html" FileName="wp10~1.htm|wp10.html" Version="" Language="" Attributes="" SourcePath="..\CSSR Work Papers Injector\Required Files\Sample Papers\wp10.html" SelfReg="false"/>
+    <ROW File="wp197.html" Component_="dummy.html" FileName="wp197~1.htm|wp197.html" Version="" Language="" Attributes="" SourcePath="..\CSSR Work Papers Injector\Required Files\Sample Papers\wp197.html" SelfReg="false"/>
+    <ROW File="wp27.html" Component_="dummy.html" FileName="wp27~1.htm|wp27.html" Version="" Language="" Attributes="" SourcePath="..\CSSR Work Papers Injector\Required Files\Sample Papers\wp27.html" SelfReg="false"/>
+    <ROW File="wp9.html" Component_="dummy.html" FileName="wp9~1.htm|wp9.html" Version="" Language="" Attributes="" SourcePath="..\CSSR Work Papers Injector\Required Files\Sample Papers\wp9.html" SelfReg="false"/>
+    <ROW File="za.exe" Component_="za.exe" FileName="7za.exe" Version="" Language="" Attributes="" SourcePath="..\CSSR Work Papers Injector\Required Files\7za.exe" SelfReg="false"/>
+    <ROW File="AutoUpdate.exe" Component_="AutoUpdate.exe" FileName="AutoUp~1.exe|AutoUpdate.exe" Version="" Language="" Attributes="" SourcePath="..\CSSR Work Papers Injector\Required Files\AutoUpdate.exe" SelfReg="false"/>
+    <ROW File="CSSR_Work_Papers_Injector.exe" Component_="CSSR_Work_Papers_Injector.exe" FileName="CSSRWo~1.exe|CSSR Work Papers Injector.exe" Version="" Language="" Attributes="" SourcePath="..\CSSR Work Papers Injector\Required Files\CSSR Work Papers Injector.exe" SelfReg="false"/>
+    <ROW File="Splash_Image.jpg" Component_="Inputs.txt" FileName="Splash~1.jpg|Splash_Image.jpg" Version="" Language="" Attributes="" SourcePath="..\CSSR Work Papers Injector\Required Files\Inputs\Splash_Image.jpg" SelfReg="false"/>
+    <ROW File="wp154.html" Component_="dummy.html" FileName="wp154~1.htm|wp154.html" Version="" Language="" Attributes="" SourcePath="..\CSSR Work Papers Injector\Required Files\Sample Papers\wp154.html" SelfReg="false"/>
+    <ROW File="wp155.html" Component_="dummy.html" FileName="wp155~1.htm|wp155.html" Version="" Language="" Attributes="" SourcePath="..\CSSR Work Papers Injector\Required Files\Sample Papers\wp155.html" SelfReg="false"/>
+    <ROW File="wp3.html" Component_="dummy.html" FileName="wp3~1.htm|wp3.html" Version="" Language="" Attributes="" SourcePath="..\CSSR Work Papers Injector\Required Files\Sample Papers\wp3.html" SelfReg="false"/>
+    <ROW File="wp74.html" Component_="dummy.html" FileName="wp74~1.htm|wp74.html" Version="" Language="" Attributes="" SourcePath="..\CSSR Work Papers Injector\Required Files\Sample Papers\wp74.html" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Source="" Target="A higher version of [ProductName] is installed."/>
+    <ROW Action="AI_ViewReadme" Type="194" Source="viewer.exe" Target="[#Description.txt]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="AI_LaunchApp" Type="194" Source="viewer.exe" Target="[#Application_Loader.exe]"/>
+    <ROW Action="SET_TARGETDIR" Type="307" Source="TARGETDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="UpgradeCode" VersionMin="" VersionMax="ProductVersion" Language="" Attributes="1025" Remove=""/>
+    <ROW UpgradeCode="UpgradeCode" VersionMin="ProductVersion" VersionMax="" Language="" Attributes="2" Remove=""/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiMergeModsComponent">
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="CSSR_Work_Papers_Injector" Directory_="SHORTCUTDIR" Name="CSSRWo~1|CSSR Work Papers Injector" Component_="Application_Loader.exe" Target="[TARGETDIR]Application_Loader.exe" Arguments="" Description="" Hotkey="0" Icon_="controlPanelIcon.exe" IconIndex="0" ShowCmd="1" WkDir=""/>
+    <ROW Shortcut="Uninstall_CSSR_Work_Papers_Injector" Directory_="SHORTCUTDIR" Name="Uninst~1|Uninstall CSSR Work Papers Injector" Component_="Application_Loader.exe" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Description="" Hotkey="0" Icon_="SystemFolder_msiexec.exe" IconIndex="0" ShowCmd="1" WkDir=""/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="SystemFolder_msiexec.exe" SourcePath="&lt;uninstall.ico&gt;" Index="0"/>
+    <ROW Name="controlPanelIcon.exe" SourcePath="Images\Application_Icon.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="installer_background.jpg" SourcePath="Images\installer_background.jpg"/>
+    <ROW Name="installer_background_dialog.jpg" SourcePath="Images\installer_background_dialog.jpg"/>
+    <ROW Name="viewer.exe" SourcePath="&lt;viewer.exe&gt;"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ATTRIBUTE name="Start" value="WelcomeDlg FolderDlg VerifyReadyDlg"/>
+    <ATTRIBUTE name="Progress" value="ProgressDlg"/>
+    <ATTRIBUTE name="End" value="ExitDialog"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiMediaComponent">
+    <ATTRIBUTE name="InstallationType" value="1"/>
+    <ATTRIBUTE name="MediaSize" value="0"/>
+    <ATTRIBUTE name="Compress" value="1"/>
+    <ATTRIBUTE name="Package" value="10"/>
+    <ATTRIBUTE name="PackageName" value="Release\CSSR Work Papers Injector Installer"/>
+    <ATTRIBUTE name="IconPath" value="Images\Application_Icon.ico?0"/>
+  </COMPONENT>
+</DOCUMENT>
